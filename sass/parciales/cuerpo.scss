@@ -1,0 +1,143 @@
+body {
+    background-color: #e7e7e7; }
+
+
+
+  //Creo el mapa
+
+  $style:(
+
+  color: #ff0000
+  espacio-letra: 5px
+  margen-general: 50px
+
+  );
+
+  // Creo el mixin
+
+  @mixin alto-ancho($width, $height){
+
+    width:$width;
+
+    height:$height;
+
+  }
+
+
+  
+  h1 {
+    color: #ff0000;
+    letter-spacing: map-get($style,espacio-letra);
+    text-transform: uppercase;
+    margin-left: map-get($style,margen-general);
+    margin-right: map-get($style,margen-general);
+    margin-top: map-get($style,margen-general);
+    margin-bottom: map-get($style,margen-general);
+ }
+  
+    /* Animación 1 */
+  h1 {
+      animation-duration: 5s;
+      animation-name: vieneyva;
+      animation-iteration-count:initial;
+  }
+   
+  
+   @keyframes vieneyva {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+   }
+   
+  
+  h2 {
+    @extend h1;
+    color: #808080;
+    font-style: bold;
+    ;
+ }
+  
+  h3, h4 {
+    @extend h1;
+    color: #a52a2a;
+    font-style: oblique;
+    font-family: Helvetica;
+  
+ }
+  
+  
+  p {
+    color: #000000;
+    margin-left: map-get($style,margen-general);
+    margin-right: map-get($style,margen-general);
+    margin-top: map-get($style,margen-general); 
+  }
+  
+  ul {
+    text-transform: uppercase; 
+  
+    li {
+    border-color: black 2px solid;
+    display: inline; 
+
+        a {
+        color: #f08080; }
+    }
+}
+  
+  
+  .titulos {
+    background-color: white; }
+  
+  .cuerpo {
+    background-color: white; }
+  
+  .texto {
+    margin-left: map-get($style,margen-general);
+    margin-right: map-get($style,margen-general); }
+  
+  form {
+    margin-left: map-get($style,margen-general);
+    margin-right: map-get($style,margen-general);
+    margin-top: map-get($style,margen-general);
+    margin-bottom: map-get($style,margen-general); }
+  
+  /* Animación 2 - Uso el mixin */
+    input {
+      @include alto-ancho(50px,30px);
+      
+      transition: all 2s;       
+   
+        input:focus {
+      width: 700px;
+      font-size: 14px;
+      font-style:oblique
+  
+    } 
+}
+  
+    @keyframes efecto_redes {
+      0%{ opacity: 0; }
+      25%{ opacity: 0.25; }
+      50%{ opacity: 0.5; }
+      75%{ opacity: 0.75;}
+      100%{ opacity: 1;}
+   }
+  
+   .redes {
+    @include alto-ancho(50px,50px);
+    animation-name: efecto_redes;
+    animation-iteration-count:inherit;
+    animation-timing-function: ease-in;
+    animation-duration: 10s;
+    animation-delay: 0s;
+  }
+
+
+  
+   
+   
+  

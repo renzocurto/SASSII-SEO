@@ -1,1 +1,167 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+body {
+  background-color: #e7e7e7;
+}
+
+h1 {
+  color: #ff0000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Animación 1 */
+h1 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: vieneyva;
+          animation-name: vieneyva;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+@-webkit-keyframes vieneyva {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes vieneyva {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  color: grey;
+  font-style: bold;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h3, h4 {
+  color: brown;
+  font-style: oblique;
+  font-family: Helvetica;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+ul {
+  text-transform: uppercase;
+}
+
+ul li {
+  border-color: black 2px solid;
+  display: inline;
+}
+
+ul li a {
+  color: lightcoral;
+}
+
+.titulos {
+  background-color: white;
+}
+
+.cuerpo {
+  background-color: white;
+}
+
+.texto {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+form {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Animación 2 */
+input {
+  width: 50px;
+  height: 30px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+input input:focus {
+  width: 700px;
+  font-size: 14px;
+  font-style: oblique;
+}
+
+@-webkit-keyframes efecto_redes {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes efecto_redes {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.redes {
+  width: 50px;
+  height: 50px;
+  -webkit-animation-name: efecto_redes;
+          animation-name: efecto_redes;
+  -webkit-animation-iteration-count: inherit;
+          animation-iteration-count: inherit;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+/*# sourceMappingURL=main.css.map */
